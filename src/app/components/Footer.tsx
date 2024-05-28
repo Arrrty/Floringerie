@@ -18,32 +18,30 @@ export default function Footer() {
     
 
     return (
-        <footer className={cls("flex items-center justify-center text-xs", {
+        <nav className={cls("flex list-none items-center justify-evenly text-xs w-full", {
             'dark': theme,
             'dark:bg-slate-800 dark:text-white': true,
             'md:hidden': true
         })}>
-            <nav className="flex list-none justify-evenly w-full">
-                {menu.map((item) => (
-                    <li key={item.name}>
-                        <Link 
-                            className={cls("flex flex-col items-center justify-center cursor-pointer transition-all duration-500 px-2 py-1 tracking-wider", {
-                                'bg-[#dd87a25b]': pathName === item.path
-                            })}
-                            href={item.path}
-                        >
-                            <Image
-                                className="dark:invert"
-                                width={20}
-                                height={20}
-                                src={item.icon}
-                                alt={item.name}
-                            />
-                            {item.name}
-                        </Link>
-                    </li>
-                ))}
-            </nav>
-        </footer>
+            {menu.map((item) => (
+                <li key={item.name}>
+                    <Link 
+                        className={cls("flex flex-col items-center justify-center cursor-pointer transition-all duration-500 px-2 py-1 tracking-wider", {
+                            'bg-[#dd87a25b]': pathName === item.path
+                        })}
+                        href={item.path}
+                    >
+                        <Image
+                            className="dark:invert"
+                            width={20}
+                            height={20}
+                            src={item.icon}
+                            alt={item.name}
+                        />
+                        {item.name}
+                    </Link>
+                </li>
+            ))}
+        </nav>
     );
 }

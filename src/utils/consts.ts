@@ -11,7 +11,7 @@ export const menu = [
     },
     {
         name: "Галерея",
-        path: "/galary",
+        path: "/gallery",
         icon: geleryIcon,
     },
     {

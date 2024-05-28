@@ -31,4 +31,15 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
 body, html {
   -ms-overflow-style: none;  /* IE и Edge */
   scrollbar-width: none;  /* Firefox */
+  box-sizing: border-box;
+}
+
+.scroll-none {
+  scroll-behavior: unset;
+  -ms-overflow-style: none;  /* IE и Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scroll-none::-webkit-scrollbar {
+  display: none;
 }
