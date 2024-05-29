@@ -5,7 +5,7 @@ export interface ThemeState {
 }
 
 const initialState: ThemeState = {
-  value: true,
+  value: false,
 }
 
 export const themeSlice = createSlice({
@@ -16,10 +16,13 @@ export const themeSlice = createSlice({
       state.value = !state.value;
       localStorage.setItem("theme", JSON.stringify(state.value));
     },
+    setTheme: (state, action) => {
+      state.value = action.payload;
+    }
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { toggleTheme } = themeSlice.actions;
+export const { toggleTheme, setTheme } = themeSlice.actions;
 
 export default themeSlice.reducer;

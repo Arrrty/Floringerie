@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en" >
       <Providers>
-        <body className={cls(`${antiqua.variable} font-serif flex flex-col relative w-full h-[100dvh] scroll-none`, {
+        <body className={cls(`${antiqua.variable} text-slate-800 font-serif flex flex-col relative w-full h-[100dvh] scroll-none`, {
           "text-sm": true,
           "sm:text-base": true,
           "md:text-lg": true,

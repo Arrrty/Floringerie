@@ -51,6 +51,7 @@ export default function Page() {
         })}>
             {listProducts.map((item, index, l) => (
                 <GalleryItem
+                    id={item.id}
                     key={item.id}
                     name={item.name}
                     price={item.price}

@@ -12,7 +12,7 @@ const config: Config = {
       keyframes: {
           logo: {
               '0%, 100%': {
-                  color: '#374151',
+                  color: '#1e293b',
               },
               '50%': { 
                   color: '#c3899b',
@@ -30,7 +30,7 @@ const config: Config = {
       animation: {
           logo: 'logo 10s ease-in-out infinite',
           'logo-dark': 'logo-dark 10s ease-in-out infinite',
-          'spin-slow': 'spin 5s linear infinite',
+          'spin-slow': 'spin 3s linear infinite',
       },
     },
   },
